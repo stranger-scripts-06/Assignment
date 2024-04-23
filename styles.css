@@ -1,0 +1,81 @@
+/* styles.css */
+.from-custom-start {
+    background-color: #7B91FF; /* Start color */
+}
+
+.to-custom-end {
+    background-color: #95BEFF; /* End color */
+}
+
+.gradient-button {
+    background-image: linear-gradient(to left, #7B91FF, #95BEFF);
+    padding: 12px 24px; /* Adjust the padding as needed */
+    font-size: 16px; /* Adjust the font size as needed */
+    /* Other button styles */
+    font-weight: 500;
+    margin-top: 80px;
+}
+
+
+
+.button-separator {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.separator-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #7F7F7F; /* Adjust the color as needed */
+    stroke-width: 0.5px;
+}
+
+.separator-text {
+    padding: 0 10px;
+    color: #4B5563; /* Adjust the color as needed */
+    font-size: 14px; /* Adjust the font size as needed */
+}
+
+/* Style the button container */
+.button-container {
+    display: flex;
+    justify-content:space-around; /* Space between the buttons */
+    margin-top: 20px; /* Adjust margin as needed */
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+/* Define styles for the Google button */
+.google-button {
+    background-color: transparent; /* Transparent background */
+    border: 1px solid rgb(23, 23, 23); /* Google Blue border */
+    color: #4285F4; /* Google Blue text color */
+    /* Add any additional styles as needed */
+    height: 50px;
+    width:50px;
+}
+
+.google-button img {
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    align-items: center;
+}
+
+/* Define styles for the Facebook button */
+.facebook-button {
+    background-color: transparent; /* Transparent background */
+    border: 1px solid rgb(23, 23, 23); /* Google Blue border */
+    color: #4285F4; /* Google Blue text color */
+    /* Add any additional styles as needed */
+    height: 50px;
+    width:50px;
+}
+
+.facebook-button img {
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    align-items: center;
+}
+
+
