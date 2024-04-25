@@ -83,4 +83,43 @@
     transform: translateY(-50%);
 }
 
+.tiles-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F1F1F1
+    ; /* Grey background color */
+    padding: 13px;
+    border-radius: 12px; /* Rounded corners */
+    margin-bottom: 20px; /* Add spacing between tiles */
+}
+
+.tile-title {
+    font-size: 17px; /* Adjust font size as needed */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+}
+
+/* Style checkboxes */
+input[type="checkbox"] {
+    margin-left: 10px; /* Add spacing between title and checkbox */
+    width: 20px; /* Increase checkbox size */
+    height: 20px;
+}
+
+
+/* Custom styles for the chart canvas */
+#caloriesChart {
+    max-width: 400px; /* Adjust as needed */
+    margin: 0; /* Center the chart */
+    border: 1px solid #ddd; /* Border for the chart */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px; /* Padding around the chart */
+}
+
 
