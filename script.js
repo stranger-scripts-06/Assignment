@@ -10,21 +10,10 @@ document.addEventListener('DOMContentLoaded', function () {
             eyeIcon.src = type === 'password' ? 'openeye.png' : 'closedeye.png';
         });
 
-        signinForm.addEventListener('submit', function (event) {
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-
-            if (!email || !password) {
-                event.preventDefault();
-                alert('Please enter all fields');
-            } else {
-                // Redirect to the next page
-                window.location.href = 'goals.html'; // Replace 'goals.html' with the URL of your next page
-            }
-        });
-    } else {
+        
         console.error('Required elements not found.');
     }
+    
 
     const labels = ['6:00','7:00','8:00','9:00','10:00','11:00', '12:00','13:00','14:00', '15:00','16:00','17:00', '18:00', '19:00'];
     const data = [200,50, 100, 400, 150, 200, 600, 200, 400, 750, 75, 250, 460];
@@ -117,4 +106,31 @@ function getDayOfWeek(day) {
     date.setDate(day);
     return daysOfWeek[date.getDay()];
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const signupForm = document.getElementById('signin-form');
+
+    if (signupForm) {
+        signupForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // Get the values of the form fields
+            const firstName = document.getElementById('FirstName').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const termsAndConditionsChecked = document.getElementById('termsAndConditions').checked;
+
+            // Check if all fields are filled
+            if (firstName && email && password && termsAndConditionsChecked) {
+                // Redirect to the next page
+                window.location.href = 'goals.html'; // Replace 'goals.html' with the URL of your next page
+            } else {
+                // Show an alert if any field is missing
+                alert('Please fill in all fields and agree to the terms and conditions.');
+            }
+        });
+    } else {
+        console.error('Signup form not found.');
+    }
+});
 
