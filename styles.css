@@ -267,4 +267,69 @@ input[type="checkbox"] {
     margin-top: -30px; /* Half of the height to position it half inside and half outside */
 }
 
+.working-tile {
+    background-color: rgba(140, 177, 255, 0.6);
+    border-radius: 10px;
+    box-shadow: -4px 8px 25px -8px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    margin-bottom: 20px;
+    font-weight: 300px;
+}
+
+.working-content {
+    display: flex;
+    align-items: center;
+}
+
+.working-text {
+    flex: 1;
+}
+
+.working-image {
+    margin-left: 20px; /* Adjust as needed */
+}
+
+.working-image img {
+    width: 100px; /* Adjust as needed */
+    height: 100px;
+    border-radius: 5px;
+}
+.working-tiletitle{
+    font-size: 16px;
+    font-weight:500;
+    margin-bottom: 5px;
+}
+
+.tile-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 20px; /* Adjust as needed */
+}
+
+.calendertile {
+    width: 180px; /* Adjusted width */
+    height: 120px; /* Adjust as needed */
+    border-radius: 10px; /* Rounded corners */
+    border: 10px black;
+    margin-right: 10px; /* Adjusted spacing between tiles */
+    margin-right: 10px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    padding: 15px;
+}
+
+
+
+.calendertile.selected {
+    background: linear-gradient(270deg, #7B91FF 0%, #95BEFF 100%); /* Gradient background for selected tile */
+}
+
+.date {
+    font-size: 24px;
+    text-align: center;
+}
+
+.day {
+    text-align: center;
+}
+
 

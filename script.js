@@ -71,4 +71,50 @@ document.addEventListener('DOMContentLoaded', function () {
     const myChart = new Chart(ctx, chartConfig);
 
     console.log('Script loaded!');
+
+    
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const tileContainer = document.getElementById('tileContainer');
+    let selectedTile = null;
+
+    // Generate calendar tiles for 31 days
+    for (let i = 1; i <= 31; i++) {
+        const tile = document.createElement('div');
+        tile.classList.add('calendertile');
+        
+        const date = document.createElement('div');
+        date.classList.add('date');
+        date.textContent = i;
+
+        const day = document.createElement('div');
+        day.classList.add('day');
+        day.textContent = getDayOfWeek(i); // Get day of week based on date
+
+        tile.appendChild(date);
+        tile.appendChild(day);
+
+        tile.addEventListener('click', function() {
+            // Remove selected class from previously selected tile
+            if (selectedTile) {
+                selectedTile.classList.remove('selected');
+            }
+            // Add selected class to the clicked tile
+            tile.classList.add('selected');
+            selectedTile = tile;
+        });
+
+        tileContainer.appendChild(tile);
+    }
+});
+
+// Function to get the day of the week based on date
+function getDayOfWeek(day) {
+    const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const date = new Date();
+    date.setDate(day);
+    return daysOfWeek[date.getDay()];
+}
+
