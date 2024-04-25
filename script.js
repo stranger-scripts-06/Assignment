@@ -134,3 +134,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// Get all nav item elements
+const navItems = document.querySelectorAll('.nav-item');
+
+// Add click event listener to each nav item
+navItems.forEach(item => {
+    item.addEventListener('click', function() {
+        // Remove 'selected' class from all nav items
+        navItems.forEach(navItem => {
+            navItem.classList.remove('selected');
+        });
+        
+        // Add 'selected' class to the clicked nav item
+        this.classList.add('selected');
+    });
+});
+
+
