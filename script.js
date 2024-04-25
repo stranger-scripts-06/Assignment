@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
             datasets: [{
                 label: 'Calories Burnt',
                 data: data,
-                backgroundColor: 'rgba(149, 190, 255, 1)', // Light purple color for bars
-                borderColor: 'rgba(123, 145, 255, 1)', // Dark purple border color for bars
+                backgroundColor: 'rgba(149, 190, 255, 1)', 
+                borderColor: 'rgba(123, 145, 255, 1)', 
                 borderWidth: 2
             }]
         },
@@ -35,21 +35,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 y: {
                     beginAtZero: true,
                     grid: {
-                        display: false // Hide y-axis gridlines
+                        display: false
                     },
                     ticks: {
-                        stepSize: 200 // Adjust y-axis step size
+                        stepSize: 200 
                     }
                 },
                 x: {
                     grid: {
-                        display: false // Hide x-axis gridlines
+                        display: false 
                     }
                 }
             },
             plugins: {
                 legend: {
-                    display: false // Hide legend
+                    display: false 
                 }
             }
         }
@@ -69,7 +69,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const tileContainer = document.getElementById('tileContainer');
     let selectedTile = null;
 
-    // Generate calendar tiles for 31 days
     for (let i = 1; i <= 31; i++) {
         const tile = document.createElement('div');
         tile.classList.add('calendertile');
@@ -80,17 +79,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const day = document.createElement('div');
         day.classList.add('day');
-        day.textContent = getDayOfWeek(i); // Get day of week based on date
+        day.textContent = getDayOfWeek(i); 
 
         tile.appendChild(date);
         tile.appendChild(day);
 
         tile.addEventListener('click', function() {
-            // Remove selected class from previously selected tile
             if (selectedTile) {
                 selectedTile.classList.remove('selected');
             }
-            // Add selected class to the clicked tile
             tile.classList.add('selected');
             selectedTile = tile;
         });
@@ -99,7 +96,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// Function to get the day of the week based on date
 function getDayOfWeek(day) {
     const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     const date = new Date();
@@ -112,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (signupForm) {
         signupForm.addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent the default form submission behavior
+            event.preventDefault(); 
 
             // Get the values of the form fields
             const firstName = document.getElementById('FirstName').value;
@@ -123,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Check if all fields are filled
             if (firstName && email && password && termsAndConditionsChecked) {
                 // Redirect to the next page
-                window.location.href = 'goals.html'; // Replace 'goals.html' with the URL of your next page
+                window.location.href = 'goals.html'; 
             } else {
                 // Show an alert if any field is missing
                 alert('Please fill in all fields and agree to the terms and conditions.');
@@ -134,7 +130,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// Get all nav item elements
 const navItems = document.querySelectorAll('.nav-item');
 
 // Add click event listener to each nav item
