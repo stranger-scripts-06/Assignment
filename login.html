@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
 </head>
 
 <header class="bg-gray-100 text-white">
@@ -31,27 +33,26 @@
 <body class="bg-white">
 
 <main class="container mx-auto py-8 px-8">
-    <h1 class="text-2xl font-bold font-roboto mb-4 mt-4" style="color: #2C2B2B">Create an account</h1>
+    <h1 class="text-2xl font-bold font-roboto mb-4 mt-4" style="color: #2C2B2B">Welcome Back</h1>
 
     <!-- HTML Form -->
     <form class="max-w-md mx-auto mt-10">
         <div class="mb-4">
-            <input type="text" id="FirstName" name="FirstName" placeholder="First Name" required class="form-input mt-1 w-full px-4 py-3 rounded-lg bg-gray-100 focus:outline-none focus:bg-gray-200">
-        </div>
-        <div class="mb-4">
-            <input type="text" id=" LastName" name="LastName" placeholder="Last name" required class="form-input mt-1 w-full px-4 py-3 rounded-lg bg-gray-100 focus:outline-none focus:bg-gray-200">
-        </div>
-        <div class="mb-4">
             <input type="email" id="email" name="email" placeholder="Email" required class="form-input mt-1 w-full px-4 py-3 rounded-lg bg-gray-100 focus:outline-none focus:bg-gray-200">
         </div>
-        <div class="mb-4">
+        <div class="mb-4 relative">
             <input type="password" id="password" name="password" placeholder="Password" required class="form-input mt-1 w-full px-4 py-3 rounded-lg bg-gray-100 focus:outline-none focus:bg-gray-200">
+            <span class="toggle-password absolute inset-y-0 right-0 flex items-center pr-3">
+                <img src="openeye.png" alt="Show Password" class="w-6 h-6 text-gray-100 cursor-pointer" id="eye-icon">
+            </span>
         </div>
+        
+        
+        
         <div class="mb-4 flex items-center">
-            <input type="checkbox" id="termsAndConditions" name="termsAndConditions" required class="form-checkbox mr-2">
-            <label for="termsAndConditions" class="text-gray-700 text-xs">By proceeding, I agree to all T&C and  Privacy Policy</label>
+            <a href="login.html" class="text-blue-500 underline">Forgot Password?</a>
         </div>
-        <button type="submit" class="w-full gradient-button text-white py-3 px-6 rounded-lg focus:outline-none focus:shadow-outline">Create an account</button>
+        <button type="submit" class="w-full gradient-button text-white py-3 px-6 rounded-lg focus:outline-none focus:shadow-outline mt-4 block text-center">Sign In</button>
     </form>
 
     <div class="button-separator">
@@ -61,9 +62,10 @@
     </div>
 
     <div class="button-container flex justify-between">
-        <button class="google-button flex items-center justify-center text-white py-1 px-1 rounded-lg focus:outline-none focus:shadow-outline">
+        <a href="google-signin-url" class="google-button flex items-center justify-center text-white py-1 px-1 rounded-lg focus:outline-none focus:shadow-outline">
             <img src="google-icon.png" alt="Google Icon">
-        </button>
+        </a>
+        
     
         <button class="facebook-button flex items-center justify-center text-white py-1 px-1 rounded-lg focus:outline-none focus:shadow-outline">
             <img src="facebook-icon.png" alt="Facebook Icon">
@@ -71,7 +73,7 @@
     </div>
 
     <div class="login-link text-center mt-6 text-sm">
-        <p>Already have an account? <a href="login.html" class="text-blue-500 underline">Login</a></p>
+        <p>Don't have an account yet? <a href="signup.html" class="text-blue-500 underline">Create an account</a></p>
     </div>
     
     
